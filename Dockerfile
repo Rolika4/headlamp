@@ -2,6 +2,7 @@
 # Final container image
 # hadolint global ignore=DL3006,DL3059,DL4006,SC2086,DL3015,DL3008,DL3003
 ARG IMAGE_BASE=alpine:3.18
+# hadolint ignore=DL3006
 FROM ${IMAGE_BASE} as image-base
 
 FROM --platform=${BUILDPLATFORM} golang:1.21 as backend-build
